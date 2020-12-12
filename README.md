@@ -22,6 +22,6 @@ This is a Human Resource website that tents to solve management of human resourc
 
 * Ilir Jasharaj
 * Medine Hajredini
-* Mihrie Ibrahimi
+* Mihrije Ibrahimi
 * Nazife Beqiri
 * Rrezarta Sahiti
