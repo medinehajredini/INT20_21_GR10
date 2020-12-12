@@ -20,8 +20,8 @@ This is a Human Resource website that tents to solve management of human resourc
 
 ## Group members (Contributors)
 
-* Ilir Jasharaj
-* Medine Hajredini
-* Mihrie Ibrahimi
-* Nazife Beqiri
-* Rrezarta Sahiti
+* Ilir Jasharaj (Ilir-Jasharaj, ilir.jasharaj@student.uni-pr.edu)
+* Medine Hajredini (medinehajredini, medine.hajredini@student.uni-pr.edu)
+* Mihrije Ibrahimi (MihrijeIbrahimi, mihrije.ibrahimi@student.uni-pr.edu)
+* Nazife Beqiri (NazifeBEQIRI, nazife.beqiri@student.uni-pr.edu)
+* Rrezarta Sahiti (RrezartaSahitii, rrezarta.sahiti@student.uni-pr.edu)
