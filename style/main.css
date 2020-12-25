@@ -493,3 +493,98 @@ nav {
     text-transform: none;
     line-height: 1;
 }
+.parallax {
+    background-image: url("../images/texture2.jpg");
+    background-position: 50% -3px;
+    overflow: hidden;
+    clear: both;
+    background-color: #f2f2f2;
+    color: #808080;
+
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: 50% 0;
+    background-repeat: no-repeat;
+    position: relative !important;
+    padding-bottom: 130px;
+    padding-top: 150px;
+}
+.content-with-bg {
+    background-color: #fff;
+    color: #808080;
+    padding: 30px 55px 50px;
+    position: relative;
+    overflow: visible;
+    margin-bottom: 20px;
+    min-height: 320px;
+    box-sizing: border-box;
+}
+.content-icon {
+    margin-top: -72px;
+    font-size: 28px;
+    width: 80px;
+    height: 80px;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+
+    color: #fff;
+    background: #55bce7;
+    background: -moz-linear-gradient(
+            top,
+            rgba(85, 188, 231, 1) 0%,
+            rgba(115, 111, 179, 1) 100%
+    );
+    background: -webkit-linear-gradient(
+            top,
+            rgba(85, 188, 231, 1) 0%,
+            rgba(115, 111, 179, 1) 100%
+    );
+    background: -o-linear-gradient(
+            top,
+            rgba(85, 188, 231, 1) 0%,
+            rgba(115, 111, 179, 1) 100%
+    );
+    background: -ms-linear-gradient(
+            top,
+            rgba(85, 188, 231, 1) 0%,
+            rgba(115, 111, 179, 1) 100%
+    );
+    background: linear-gradient(
+            to bottom,
+            rgba(85, 188, 231, 1) 0%,
+            rgba(115, 111, 179, 1) 100%
+    );
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$mainColor', endColorstr='$mainColor2',GradientType=0);
+    text-align: center;
+}
+.content-icon i {
+    line-height: 80px;
+}
+.round {
+    border-radius: 50%;
+}
+.content-with-bg h4 {
+    margin-top: 1.7em;
+    margin-bottom: 1.5em;
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: none;
+    color: #1f232b;
+    text-align: center;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 2.4;
+    letter-spacing: -0.4px;
+}
+.content-with-bg p {
+    margin: 0 0 10px;
+    color: #808080;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.88;
+    letter-spacing: normal;
+}
