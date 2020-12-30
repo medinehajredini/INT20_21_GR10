@@ -176,6 +176,41 @@ figure {
     line-height: 30px;
 }
 
+ul.accordion {
+    list-style: none;
+    padding: 0;
+}
+ul.accordion .inner {
+    padding: 1em;
+    overflow: hidden;
+    display: none;
+    background-color: transparent;
+    color: #fff;
+}
+ul.accordion li {
+    margin-bottom: 15px;
+}
+ul.accordion li a.toggle {
+    width: 100%;
+    display: block;
+    color: #fff;
+    box-sizing: border-box;
+    background-color: #736fb3;
+    padding: 18px 50px 17px 32px;
+    transition: background 0.3s ease;
+    text-decoration: none;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    line-height: 1.3;
+    margin: -2px;
+    border: none;
+    word-wrap: break-word;
+}
+ul.accordion li a.toggle:hover {
+    background-color: #55bce7;
+}
 header {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(calc(33% - 30px), 1fr));
@@ -673,4 +708,28 @@ input[type="number"] {
     font-weight: 600;
     font-size: 40px;
     text-transform: uppercase;
+}
+.content-left-img {
+    background-image: url("../repository/half_image.jpg");
+    z-index: 2;
+    position: relative;
+    width: 103%;
+    height: 100%;
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.gradient-bg1 {
+    background-image: url("../images/footer-bg.jpg");
+    z-index: 2;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.content-right-accordion {
+    overflow: hidden;
+    z-index: 3;
 }
