@@ -733,3 +733,67 @@ input[type="number"] {
     overflow: hidden;
     z-index: 3;
 }
+
+footer {
+    color: #808080;
+}
+.navF {
+    width: auto;
+    max-width: 400px;
+    border-collapse: collapse;
+    display: inline-block;
+    /* text-align: left; */
+}
+.navF,
+.navF td {
+    border-top: 1px solid #808080;
+    color: #808080;
+}
+.navF td {
+    font-size: 16px;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 2;
+    letter-spacing: normal;
+    padding: 10px;
+}
+.navF td a {
+    text-decoration: none;
+    color: #808080;
+    transition: all 0.3s ease-in-out 0s;
+}
+.navF td a:hover {
+    color: #fff;
+}
+.navF td:first-child {
+    /* text-align: right; */
+}
+.navF tr:first-child td {
+    border-top: none;
+}
+.contactF a,
+.contactF p {
+    line-height: 22px;
+    color: #808080;
+    font-size: 16px;
+    font-weight: 300;
+    /* display: inline-block; */
+    margin-bottom: 10px;
+}
+.contactF a {
+    text-decoration: none;
+    color: #fff;
+}
+.contactF i {
+    display: inline-block;
+    width: 16px;
+    color: #55bce7;
+    margin-right: 10px;
+}
+.copyright {
+    background-color: black;
+    color: #808080;
+    padding: 35px 0;
+    text-align: center;
+}
