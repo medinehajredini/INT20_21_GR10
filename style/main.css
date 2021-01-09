@@ -211,6 +211,31 @@ ul.accordion li a.toggle {
 ul.accordion li a.toggle:hover {
     background-color: #55bce7;
 }
+
+input:invalid {
+    background-color: rgba(153, 0, 0, 0.8);
+}
+input:focus:invalid {
+    outline: none;
+}
+.error {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 0;
+
+    font-size: 80%;
+    color: white;
+    background-color: rgba(153, 0, 0, 0.8);
+    border-radius: 0 0 5px 5px;
+
+    box-sizing: border-box;
+}
+.error.active {
+    padding: 0.3em;
+}
+
 header {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(calc(33% - 30px), 1fr));
@@ -796,4 +821,100 @@ footer {
     color: #808080;
     padding: 35px 0;
     text-align: center;
+}
+.img-with-desc figcaption {
+    padding: 20px;
+    text-align: center;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    box-shadow: 0px 5px 10px #808080;
+}
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    filter: alpha(opacity=70);
+    -moz-opacity: 0.7;
+    -khtml-opacity: 0.7;
+    opacity: 0.7;
+    z-index: 100;
+    display: none;
+}
+.cnt223 a {
+    text-decoration: none;
+}
+.popup {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    display: none;
+    position: fixed;
+    z-index: 101;
+    text-align: center;
+}
+.cnt223 {
+    min-width: 600px;
+    width: 600px;
+    min-height: 60px;
+    /* margin: 100px auto; */
+    background: #f3f3f3;
+    position: relative;
+    z-index: 103;
+    padding: 15px 35px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px #000;
+    display: inline-block;
+    text-align: center;
+    top: 50%;
+    margin: -25vh 0vh 0vh 0vh;
+}
+.cnt223 p {
+    clear: both;
+    color: #555555;
+    /* text-align: justify; */
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.cnt223 .close {
+    color: #d91900;
+    font-weight: bold;
+    display: inline-block;
+}
+.cnt223 .close#saveNameFirstTime {
+    color: #2ea516;
+    font-weight: bold;
+    display: inline-block;
+    margin-left: 20px;
+}
+.cnt223 #nameForFirst {
+    color: #555555;
+    margin: 0 0 20px 0;
+    border: none;
+    outline: none;
+    padding: 15px 25px;
+    font-size: 20px;
+}
+/* .cnt223 p a {
+  color: #d91900;
+  font-weight: bold;
+} */
+.cnt223 .x {
+    float: right;
+    height: 35px;
+    left: 22px;
+    position: relative;
+    top: -25px;
+    width: 34px;
+}
+.cnt223 .x:hover {
+    cursor: pointer;
+}
+#message p {
+    font-weight: bold;
 }
