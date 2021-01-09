@@ -96,7 +96,6 @@
                         ></path>
                     </g>
                 </svg>
-                <!-- <img src="images/logo.png" class="logo_img" alt="" /> -->
                 <span class="logo_subtext"> Consult </span>
             </a>
         </div>
@@ -235,7 +234,8 @@
 
     <section class="gradient-bg gradient-padding-bg" id="cvSubbmit">
         <form
-                class="candidate-cv-form"
+                class="candidate-cv-form form-validate"
+                onsubmit="return checkFormValidity()"
         >
             <div class="special-titles text-center mb30">
                 <h5>Submit</h5>
@@ -271,8 +271,8 @@
                                 type="email"
                                 name="email"
                                 placeholder="Email Address"
-                                required
                         />
+                        <span class="error" aria-live="polite"></span>
                     </label>
                     <label for="jobsector">
                         <input
@@ -453,9 +453,73 @@
         </div>
     </footer>
 
+    <div class="popup">
+        <div class="cnt223">
+            <div id="messageForFirst">
+                <p>If you are here for the first time please enter your name:</p>
+                <input
+                        type="text"
+                        name="firstName"
+                        id="nameForFirst"
+                        placeholder="Please enter your name here..."
+                />
+            </div>
+            <div id="message"></div>
+            <br/>
+            <div class="control">
+                <a href="" class="close">Close</a>
+                <a href="#" class="close" id="saveNameFirstTime">Save Name</a>
+            </div>
+        </div>
+    </div>
 </div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script type="text/javascript" src="js/main.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $(function () {
+            var overlay = $('<div id="overlay"></div>');
+            overlay.appendTo(".wrapper-page");
+            overlay.show();
+            $(".popup").show();
+            $(".close").click(function () {
+                $(".popup").hide();
+                overlay.appendTo(".wrapper-page").remove();
+                return false;
+            });
+
+            $(".x").click(function () {
+                $(".popup").hide();
+                overlay.appendTo(".wrapper-page").remove();
+                return false;
+            });
+        });
+
+        var nameLS = localStorage.getItem("nameForFirst");
+        if (nameLS) {
+            $("#saveNameFirstTime").hide();
+            $("#messageForFirst").hide();
+            $("#message").append(
+                '<p>Welcome back, <mark><abbr title="Name of user localy">' +
+                nameLS +
+                "</abbr></mark></p>"
+            );
+        } else {
+            $("#saveNameFirstTime").click(function () {
+                var valueNameInput = $("#nameForFirst").val();
+                if (valueNameInput.trim().length > 0) {
+                    try {
+                        localStorage.setItem("nameForFirst", valueNameInput);
+                    } catch (e) {
+                        localStorage.clear();
+                    }
+                }
+                return;
+            });
+        }
+    });
+</script>
 </body>
 </html>
