@@ -1,10 +1,82 @@
+/*
+ * animation with js
+ */
+$("#animateDiv").animate(
+    {
+        height: "50px",
+        width: "200px",
+    },
+    {
+        // options parameter
+        duration: 5000,
+        complete: function () {
+            $(this).animate(
+                {
+                    height: "0px",
+                    width: "100px",
+                },
+                5000,
+                function () {
+                    $("#animateMsgDiv").text("Animation completed..");
+                }
+            );
+        },
+        start: function () {
+            $("#animateMsgDiv").append("starting animation..");
+        },
+    }
+);
+
+
 $(document).ready(function () {
     // accordion
     $(".toggle").click(function (event) {
         let $this = $(this);
         accordionAnimate($this, event);
     });
+
+    // update background color depends in current hours
+    setInterval(updateBackground, 1000 * 60);
+    updateBackground();
+
+    // Add smooth scrolling to all links
+    $("a").click(function (event) {
+        let $this = $(this);
+        linkSmoothScroll($this, event);
+    });
 });
+
+function updateBackground() {
+    var hr = new Date().getHours(),
+        bstyle = document.body.style;
+    if (hr < 10) {
+        bstyle.backgroundColor = "rgb(189, 189, 189)";
+    } else {
+        bstyle.backgroundColor = "rgb(255, 255, 255)";
+    }
+}
+
+function linkSmoothScroll($this, event) {
+    var href = $this.attr("href"); // get href from clicked item
+    if (href.length > 0) {
+        var hrefParts = href.split("#");
+        if (hrefParts[1].trim().length > 0) {
+            var hash = "#" + hrefParts[1];
+            // Using jQuery's animate() method to add smooth page scroll
+            // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+            $("html, body").animate(
+                {
+                    scrollTop: $(hash).offset().top,
+                },
+                800,
+                function () {
+                    // Add hash (#) to URL when done scrolling (default click behavior)
+                    window.location.hash = hash;
+                }
+            );
+        }
+    }
+}
 
 function accordionAnimate($this, e) {
     e.preventDefault();
