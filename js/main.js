@@ -47,8 +47,9 @@ $(document).ready(function () {
 });
 
 function updateBackground() {
-    var hr = new Date().getHours(),
-        bstyle = document.body.style;
+    const hr = new Date().getHours();
+    const bstyle = document.body.style;
+
     if (hr < 10) {
         bstyle.backgroundColor = "rgb(189, 189, 189)";
     } else {
@@ -57,11 +58,11 @@ function updateBackground() {
 }
 
 function linkSmoothScroll($this, event) {
-    var href = $this.attr("href"); // get href from clicked item
+    const href = $this.attr("href"); // get href from clicked item
     if (href.length > 0) {
-        var hrefParts = href.split("#");
+        const hrefParts = href.split("#");
         if (hrefParts[1].trim().length > 0) {
-            var hash = "#" + hrefParts[1];
+            const hash = "#" + hrefParts[1];
             // Using jQuery's animate() method to add smooth page scroll
             // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
             $("html, body").animate(

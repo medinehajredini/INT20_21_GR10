@@ -96,12 +96,12 @@
                         ></path>
                     </g>
                 </svg>
-                <span class="logo_subtext"> Consult </span>
+                <span class="logo_subtext"> Resources </span>
             </a>
         </div>
 
         <div class="header-button text-center">
-            <a href="#" class="button1">Looking for Staff?</a>
+            <a href="contact.html" class="button1">Contact us?</a>
         </div>
     </header>
 
@@ -120,9 +120,6 @@
             </li>
             <li>
                 <a href="services.html">Services</a>
-            </li>
-            <li>
-                <a href="#">Blog</a>
             </li>
             <li>
                 <a href="contact.html">Contacts</a>
@@ -215,8 +212,7 @@
                 </div>
 
                 <h4>True Cloud Scale</h4>
-                <p>Working with customers making 100-40,000 hires per annum</p>
-                <p><u>This text will be underlined.</u></p>
+                <p><u>Working with customers making 100-40,000 hires per annum</u></p>
             </div>
             <div class="content-with-bg">
                 <div class="content-icon round">
@@ -325,50 +321,34 @@
 
             <ul class="accordion">
                 <li>
-                    <a class="toggle" href="#">Item 1</a>
+                    <a class="toggle" href="#">Be decisive</a>
                     <p class="inner">
-                        Let's make a nice big leafy tree. You have to make those little
-                        noises or it won't work. Let's put some happy little clouds in
-                        our world. We don't really know where this goes - and I'm not
-                        sure we really care. When you do it your way you can go anywhere
-                        you choose. No worries. No cares. Just float and wait for the
-                        wind to blow you around.
+                        Confirming your acceptance guarantees the job is yours. Usually there are other candidates in
+                        the process at this point so ensure you are committed.
                     </p>
                 </li>
 
                 <li>
-                    <a class="toggle" href="#">Item 2</a>
+                    <a class="toggle" href="#">Or take your time</a>
                     <p class="inner">
-                        Let's make a nice big leafy tree. You have to make those little
-                        noises or it won't work. Let's put some happy little clouds in
-                        our world. We don't really know where this goes - and I'm not
-                        sure we really care. When you do it your way you can go anywhere
-                        you choose. No worries. No cares. Just float and wait for the
-                        wind to blow you around.
+                        Confirming your acceptance guarantees the job is yours. Usually there are other candidates in
+                        the process at this point so ensure you are committed.
                     </p>
                 </li>
 
                 <li>
-                    <a class="toggle" href="#">Item 3</a>
+                    <a class="toggle" href="#">Resign</a>
                     <p class="inner">
-                        Let's make a nice big leafy tree. You have to make those little
-                        noises or it won't work. Let's put some happy little clouds in
-                        our world. We don't really know where this goes - and I'm not
-                        sure we really care. When you do it your way you can go anywhere
-                        you choose. No worries. No cares. Just float and wait for the
-                        wind to blow you around.
+                        Confirming your acceptance guarantees the job is yours. Usually there are other candidates in
+                        the process at this point so ensure you are committed.
                     </p>
                 </li>
 
                 <li>
-                    <a class="toggle" href="#">Item 4</a>
+                    <a class="toggle" href="#">Counter offers</a>
                     <p class="inner">
-                        Let's make a nice big leafy tree. You have to make those little
-                        noises or it won't work. Let's put some happy little clouds in
-                        our world. We don't really know where this goes - and I'm not
-                        sure we really care. When you do it your way you can go anywhere
-                        you choose. No worries. No cares. Just float and wait for the
-                        wind to blow you around.
+                        Confirming your acceptance guarantees the job is yours. Usually there are other candidates in
+                        the process at this point so ensure you are committed.
                     </p>
                 </li>
             </ul>
@@ -398,34 +378,24 @@
 
                     <table class="navF">
                         <tr>
-                            <td align="right"><a href="#">Job Search</a></td>
-                            <td align="left"><a href="#">Consultants</a></td>
+                            <td align="right"><a href="about.html">About</a></td>
+                            <td align="left"><a href="candidates.html">Candidates</a></td>
                         </tr>
                         <tr>
-                            <td align="right"><a href="#">Reviews</a></td>
-                            <td align="left"><a href="#">Insights</a></td>
-                        </tr>
-                        <tr>
-                            <td align="right"><a href="#">Survey</a></td>
-                            <td align="left"><a href="#">Careers</a></td>
-                        </tr>
-                        <tr>
-                            <td align="right"><a href="contact.html">Contact</a></td>
-                            <td align="left"><a href="about.html">About</a></td>
+                            <td align="right"><a href="services.html">Services</a></td>
+                            <td align="left"><a href="contact.html">Contacts</a></td>
                         </tr>
                     </table>
                 </div>
                 <div class="text-center">
-                    <img src="images/footer-logo1.png" class="mb30" alt=""/>
+                    <img src="images/logo.png" class="mb30" alt=""/>
                     <p class="mb30 text-italic">
-                        Duis autem vel eum iriure dolor in hendrerit in vulputate velit
-                        esse molestie consequat, vel illum dolore eu feugiat nulla.
+                        Human resources is the set of the people who make up the workforce of an organization, business sector, industry, or economy. A narrower concept is human capital, the knowledge which the individuals embody.
                     </p>
                     <div class="contactF">
                         <address>
                             <p>
-                                <i class="fa fa-map-marker highlight"></i> 4518 Spirit
-                                Drive, Deland, FL 32720
+                                <i class="fa fa-map-marker highlight"></i> 10000 Prishtina, Kosova
                             </p>
                             <p>
                                 <a href="tel:+101 123 456 789"
@@ -483,7 +453,7 @@
 <script>
     $(document).ready(function () {
         $(function () {
-            var overlay = $('<div id="overlay"></div>');
+            const overlay = $('<div id="overlay"></div>');
             overlay.appendTo(".wrapper-page");
             overlay.show();
             $(".popup").show();
@@ -500,7 +470,7 @@
             });
         });
 
-        var nameLS = localStorage.getItem("nameForFirst");
+        const nameLS = localStorage.getItem("nameForFirst");
         if (nameLS) {
             $("#saveNameFirstTime").hide();
             $("#messageForFirst").hide();
@@ -511,12 +481,13 @@
             );
         } else {
             $("#saveNameFirstTime").click(function () {
-                var valueNameInput = $("#nameForFirst").val();
+                const valueNameInput = $("#nameForFirst").val();
                 if (valueNameInput.trim().length > 0) {
                     try {
                         localStorage.setItem("nameForFirst", valueNameInput);
                     } catch (e) {
                         localStorage.clear();
+                        console.log('First name set failed!');
                     }
                 }
                 return;

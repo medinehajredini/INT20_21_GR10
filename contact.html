@@ -12,6 +12,24 @@
     <link rel="stylesheet" type="text/css" href="style/fonts.css"/>
     <link rel="stylesheet" type="text/css" href="style/reset.css"/>
     <link rel="stylesheet" type="text/css" href="style/main.css"/>
+
+    <script>
+        (function getGeolocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(alertLocation);
+            } else {
+                console.log("Geolocation is not supported by this browser.");
+            }
+        })();
+
+        function alertLocation(position) {
+            const location = {
+                latitude: position.coords.latitude,
+                longitude: position.coords.longitude
+            }
+            alert('You are located at: ' + location.latitude + ', ' + location.longitude);
+        }
+    </script>
 </head>
 <body>
 <div class="wrapper-page">
@@ -95,12 +113,12 @@
                         ></path>
                     </g>
                 </svg>
-                <span class="logo_subtext"> Consult </span>
+                <span class="logo_subtext"> Resources </span>
             </a>
         </div>
 
         <div class="header-button text-center">
-            <a href="#" class="button1">Looking for Staff?</a>
+            <a href="contact.html" class="button1">Contact us?</a>
         </div>
     </header>
 
@@ -119,9 +137,6 @@
             </li>
             <li>
                 <a href="services.html">Services</a>
-            </li>
-            <li>
-                <a href="#">Blog</a>
             </li>
             <li>
                 <a href="contact.html" class="active">Contacts</a>
@@ -182,7 +197,7 @@
                 <input
                         type="submit"
                         class="color-black border-black"
-                        value="Submit CV"
+                        value="Submit"
                 />
             </div>
         </form>
@@ -208,34 +223,24 @@
 
                     <table class="navF">
                         <tr>
-                            <td align="right"><a href="#">Job Search</a></td>
-                            <td align="left"><a href="#">Consultants</a></td>
+                            <td align="right"><a href="about.html">About</a></td>
+                            <td align="left"><a href="candidates.html">Candidates</a></td>
                         </tr>
                         <tr>
-                            <td align="right"><a href="#">Reviews</a></td>
-                            <td align="left"><a href="#">Insights</a></td>
-                        </tr>
-                        <tr>
-                            <td align="right"><a href="#">Survey</a></td>
-                            <td align="left"><a href="#">Careers</a></td>
-                        </tr>
-                        <tr>
-                            <td align="right"><a href="contact.html">Contact</a></td>
-                            <td align="left"><a href="about.html">About</a></td>
+                            <td align="right"><a href="services.html">Services</a></td>
+                            <td align="left"><a href="contact.html">Contacts</a></td>
                         </tr>
                     </table>
                 </div>
                 <div class="text-center">
-                    <img src="images/footer-logo1.png" class="mb30" alt=""/>
+                    <img src="images/logo.png" class="mb30" alt=""/>
                     <p class="mb30 text-italic">
-                        Duis autem vel eum iriure dolor in hendrerit in vulputate velit
-                        esse molestie consequat, vel illum dolore eu feugiat nulla.
+                        Human resources is the set of the people who make up the workforce of an organization, business sector, industry, or economy. A narrower concept is human capital, the knowledge which the individuals embody.
                     </p>
                     <div class="contactF">
                         <address>
                             <p>
-                                <i class="fa fa-map-marker highlight"></i> 4518 Spirit
-                                Drive, Deland, FL 32720
+                                <i class="fa fa-map-marker highlight"></i> 10000 Prishtina, Kosova
                             </p>
                             <p>
                                 <a href="tel:+101 123 456 789"

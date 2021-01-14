@@ -170,7 +170,7 @@ figure {
 .text-block ul li,
 .text-block ol li {
     margin: 0;
-    padding: 0;
+    padding: 0 0 10px 0;
     border-bottom: none;
     position: relative;
     line-height: 30px;
