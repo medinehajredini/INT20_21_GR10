@@ -6,7 +6,10 @@
 
 This is a Human Resource website that tents to solve management of human resources for different companies
 
-## Technogoly stack
+## Hosted website
+[Human Resources](https://medinehajredini.github.io/INT20_21_GR10)
+
+## Technology stack
 
 * HTML, HTML5
 * CSS, CSS3
