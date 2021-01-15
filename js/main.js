@@ -35,9 +35,8 @@ $(document).ready(function () {
         accordionAnimate($this, event);
     });
 
-    // update background color depends in current hours
-    setInterval(updateBackground, 1000 * 60);
-    updateBackground();
+    // start web worker
+    startWorker();
 
     // Add smooth scrolling to all links
     $("a").click(function (event) {
@@ -46,11 +45,10 @@ $(document).ready(function () {
     });
 });
 
-function updateBackground() {
-    const hr = new Date().getHours();
+function updateBackground(isDark) {
     const bstyle = document.body.style;
 
-    if (hr < 10) {
+    if (isDark) {
         bstyle.backgroundColor = "rgb(189, 189, 189)";
     } else {
         bstyle.backgroundColor = "rgb(255, 255, 255)";
@@ -151,5 +149,19 @@ function showError(errorPlace, message) {
     } else {
         errorPlace.textContent = ""; // Reset the content of the message
         errorPlace.className = "error"; // Reset the visual state of the message
+    }
+}
+
+function startWorker() {
+    if(typeof(Worker) !== "undefined") {
+        let worker;
+        if(typeof(worker) == "undefined") {
+            worker = new Worker("./js/web-worker.js");
+        }
+        worker.onmessage = function(event) {
+            updateBackground(event.data)
+        };
+    } else {
+        console.log('Sorry, your browser does not support Web Workers...');
     }
 }
